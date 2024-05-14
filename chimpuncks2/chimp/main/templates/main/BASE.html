@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/style_sidebar.css' %}">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="logo_title">
+                    <div class="hamburger">
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                    <img src="images/logo.svg">
+                    <h1>Сайт</h1>
+                </div>
+                <div class="buttons">
+                    <button class="button filled-button">Войти</button>
+                    <button class="button outlined-button">Регистрация</button>
+                </div>
+            </div>
+            <div class="container">
+                {%block container%}
+                
+                {% endblock %}
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="../images/student.png" alt="profile_picture">
+                <h3>Александр Дегтярев</h3>
+                <p>Студент</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Преподаватели</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">Мои задачи</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Оценки</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="settings">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Настройки</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+</body>
+
+</html>
