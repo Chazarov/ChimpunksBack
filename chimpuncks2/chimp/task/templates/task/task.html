@@ -1,0 +1,85 @@
+{% extends "main/BASE.html" %}
+
+{%block container%}
+<div id="content" class="content">
+    <ul class="breadcrumb">
+        <li><a href="teachers.html">Преподаватели</a></li>
+        <li><a href="task_list.html">Файфель Борис Леонидович</a></li>
+        <li>Простые числа</li>
+    </ul>
+    <section class="task_description">
+        <h2 class="task-title">Задача №3608. Простые числа</h2>
+        <div class="task-buttons">
+            <button class="button outlined-button">Задать вопрос преподавателю</button>
+        </div>
+    </section>
+    <p class="task-description">На плоскости задано n точек с координатами x и y, вводимыми с клавиатуры
+        в двумерный массив. Найти:
+        <br>1) Пары точек с максимальным расстоянием.
+        <br>2) Тройки точек, составляющие треугольник наибольшей площади.
+        <br>3) Четверки точек, составляющие квадрат наибольшей площади. Также проверить, являются ли эти
+        точки квадратом.
+    </p>
+    <p>Доп. файлы:</p>
+    <select id="menu" name="menu" class="button outlined-button">
+        <option value="IFST">Координаты</option>
+        <option value="IVCT">Лекция</option>
+        <option value="IVCT">Текст</option>
+    </select>
+    <button class="button filled-button">Скачать</button>
+    <br>
+    <br>
+
+    <p class="task-example">Решение</p>
+    <textarea name="comment" class="text_field" cols="80" rows="5"></textarea></p>
+    <div class="task_button">
+        <button class="button outlined-button">Прикрепить файл</button>
+        <select id="menu" name="menu" class="button outlined-button">
+            <option value="IFST">Java</option>
+            <option value="IVCT">FreeBASIC</option>
+            <option value="IVCT">Ruby</option>
+            <option value="IVCT">C</option>
+            <option value="IVCT">C++</option>
+            <option value="IVCT">PHP</option>
+            <option value="IVCT">Python</option>
+        </select>
+        <input class="button filled-button" type="submit">
+        <button class="button filled-button">Обновить</button>
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr id="top_tr">
+                <th>Файл</th>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th>Пройдено тестов</th>
+                <th>Оценка</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button class="icon-button"><i class='fas fa-file'></i> Python.py</button></td>
+                <td>18.03.2024</td>
+                <td><button class="icon-button">Проверено</button></td>
+                <td>18/24</td>
+                <td><button class="icon-button"><i class="material-icons">5</i></button></td>
+            </tr>
+            <tr>
+                <td><button class="icon-button"><i class="fas fa-file"></i> Python.py</button></td>
+                <td>18.03.2024</td>
+                <td><button class="icon-button">Проверено</button></td>
+                <td>18/24</td>
+                <td><button class="icon-button"><i class="material-icons">5</i></button></td>
+            </tr>
+            <tr>
+                <td><button class="icon-button"><i class="fas fa-file"></i> Python.py</button></td>
+                <td>18.03.2024</td>
+                <td><button class="icon-button">Проверено</button></td>
+                <td>18/24</td>
+                <td><button class="icon-button"><i class="material-icons">5</i></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{%endblock%}

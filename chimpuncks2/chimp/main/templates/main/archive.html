@@ -1,5 +1,17 @@
 {% extends "main/BASE.html" %}
 
+{% load static %}
+
+{% block css_add %}
+<link rel="stylesheet" href="{% static 'styles/style_sidebar.css' %}">
+{% endblock %}
+
 {%block container%}
 <h1> Hello my archive<h1>
+    {% for el in tasks%}
+        <div>
+            <h3>{{ el.id }}</h3>
+            <p>{{ el.name }}</p>
+        </div>
+    {%endfor%}
 {%endblock%}
